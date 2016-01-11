@@ -14,14 +14,14 @@ public interface ViewInjector {
     /**
      * 注入view
      *
-     * @param view
+     * @param view 待注入的view
      */
     void inject(View view);
 
     /**
      * 注入activity
      *
-     * @param activity
+     * @param activity 待注入的activity
      */
     void inject(Activity activity);
 
@@ -29,17 +29,17 @@ public interface ViewInjector {
      * 注入view holder
      *
      * @param handler view holder
-     * @param view
+     * @param view 待注入的view
      */
     void inject(Object handler, View view);
 
     /**
      * 注入fragment
      *
-     * @param fragment
-     * @param inflater
-     * @param container
-     * @return
+     * @param fragment 待注入的fragment
+     * @param inflater view解析器
+     * @param container view的父类
+     * @return 该fragment的content view
      */
     View inject(Object fragment, LayoutInflater inflater, ViewGroup container);
 }
